@@ -92,7 +92,7 @@ body{
 <div id="timer">
 
     <div class="days"> 
-        <div id="days" class="numbers "> </div>days</div> 
+        <div id="days" class="numbers "> </div>days</div> <!--스크립트에서 반환받은 값을 id에 대입-->
       <div class="hours"> 
         <div  id="hours" class="numbers"> </div>hours</div> 
       <div class="minutes"> 
@@ -105,7 +105,7 @@ body{
 
 </body>
 <script>
-    const year = new Date().getFullYear();
+    const year = new Date().getFullYear(); //현재
 const myDate = new Date('Jun 11, 2023 16:00:00'); //Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec
 console.log(myDate);
 
@@ -125,13 +125,13 @@ let timer = setInterval(function() {
   let seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
   // display
-  document.getElementById("days").innerHTML=days
+  document.getElementById("days").innerHTML=days //getElementById(HTML의 ID를 참조하여 데이터를 가져옴).innerHTML=스크립트의 변수를 HTML에 대입함
   document.getElementById("hours").innerHTML=hours
   document.getElementById("minutes").innerHTML=minutes
   document.getElementById("seconds").innerHTML=seconds
 
 
 
-}, 1);
+}, 1); //setInterval(function() {}, n); n/1000초마다 갱신
 </script>
 </html>
